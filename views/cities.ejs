@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <% include ./partials/head %>
+ </head>
+ <body>
+   <header>
+     <% include ./partials/header %>
+   </header>
+   <h1 class='center'>My Travels</h1>
+   <hr />
+   <div class='row'>
+     <div class='col s12 m4'>
+       <h3>Add City</h3>
+       <form action='/cities' method='post'>
+         <input type='text' name='cities' placeholder='City' />
+         <button class='btn btn-waves' type='submit'>Add</button>
+       </form>
+     </div>
+     <table class='table col m8 s12'>
+       <thead>
+         <th>City</th>
+         <th>Edit</th>
+         <th>x</th>
+       </thead>
+       <tbody>
+        <!-- <% var url = "/cities" %>
+        <% var editUrl = "cities/" + cities.id + "/edit" %> -->
+           <tr>
+             <!-- <td><%= city.name %></td> -->
+             <!-- <td><a class="btn" href=<%= editUrl %>>Edit</a></td> -->
+             <td>
+              <form method="POST" action=<%= url %>>
+                <!-- <button class="btn red">Delete</button> -->
+              </form>
+             </td>
+            </tr>
+       </tbody>
+     </table>
+   </body>
+</html>
